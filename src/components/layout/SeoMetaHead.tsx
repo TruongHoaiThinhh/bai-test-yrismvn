@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 export interface ISeoMetaHeadProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     item?: any;
     imageUrl?: string;
     pageTitle?: string;

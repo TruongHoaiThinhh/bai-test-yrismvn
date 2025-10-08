@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
+import Link from "next/link";
 
 interface RegisterFormProps {
     isLoading: boolean;
@@ -128,12 +129,12 @@ const RegisterForm = ( { isLoading, error, handleRegister }: RegisterFormProps )
                 <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                     <p className="text-center text-sm text-gray-600 dark:text-gray-400">
                         {t('auth.hasAccount')}{' '}
-                        <a
+                        <Link
                             href="/login"
                             className="text-blue-600 hover:text-blue-700 font-medium"
                         >
                             {t('auth.loginNow')}
-                        </a>
+                        </Link>
                     </p>
                 </div>
 

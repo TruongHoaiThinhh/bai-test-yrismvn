@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import SeoMetaHead from "../layout/SeoMetaHead";
+import Link from "next/link";
 
 interface LoginFormProps {
     isLoading: boolean;
@@ -81,12 +82,12 @@ const LoginForm = ({ isLoading, error, handleLogin }: LoginFormProps) => {
                     <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                         <p className="text-center text-sm text-gray-600 dark:text-gray-400">
                             {t('auth.noAccount')}{' '}
-                            <a
+                            <Link
                                 href="/register"
                                 className="text-blue-600 hover:text-blue-700 font-medium"
                             >
                                 {t('auth.registerNow')}
-                            </a>
+                            </Link>
                         </p>
                     </div>
                 </div>

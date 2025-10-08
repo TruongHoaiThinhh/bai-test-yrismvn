@@ -509,7 +509,7 @@ export default function SnippetPage({ snippet: initialSnippet }: SnippetPageProp
                                 Xác nhận xóa
                             </h3>
                             <p className="text-gray-600 dark:text-gray-400 mb-6">
-                                Bạn có chắc chắn muốn xóa snippet "{snippet.title}"? Hành động này không thể hoàn tác.
+                                Bạn có chắc chắn muốn xóa snippet {snippet.title}? Hành động này không thể hoàn tác.
                             </p>
                             <div className="flex justify-end space-x-3">
                                 <button
