@@ -9,6 +9,7 @@ import Link from 'next/link';
 import connectDB from '@/lib/mongodb';
 import Snippet from '@/models/Snippet';
 import AlgorithmAnalyzer from '@/components/common/AlgorithmAnalyzer';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface SnippetPageProps {
     snippet: ISnippet;
@@ -30,7 +31,7 @@ export default function SnippetPage({ snippet: initialSnippet }: SnippetPageProp
     });
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
     const [showShareModal, setShowShareModal] = useState(false);
-
+    const { t } = useTranslation();
     const isOwner = user && snippet.author?._id === user._id;
 
     const handleEdit = () => {
@@ -302,7 +303,9 @@ export default function SnippetPage({ snippet: initialSnippet }: SnippetPageProp
                                             href={`/user/${snippet?.author?._id || snippet?.author}`} 
                                             className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors"
                                         >
-                                            {snippet?.author?.name || snippet?.author?.email || 'Người dùng'}
+                                            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                            {(snippet?.author as any).name || (snippet?.author as any).email || t('snippets.author')}
+                                            {/* {snippet?.author?.name || snippet?.author?.email || t('snippets.author')} */}
                                         </Link>
                                     </div>
                                 </div>

@@ -6,7 +6,7 @@ export interface ISnippet extends Document {
   code: string;
   tags: string[];
   programmingLanguage: string;
-  author: mongoose.Types.ObjectId | { _id: string; name?: string; email: string };
+  author: mongoose.Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }
