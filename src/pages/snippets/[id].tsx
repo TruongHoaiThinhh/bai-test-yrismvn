@@ -32,7 +32,7 @@ export default function SnippetPage({ snippet: initialSnippet }: SnippetPageProp
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
     const [showShareModal, setShowShareModal] = useState(false);
     const { t } = useTranslation();
-    const isOwner = user && snippet.author?._id === user._id;
+    const isOwner = user && snippet.author?._id.toString() === user._id.toString();
 
     const handleEdit = () => {
         setIsEditing(true);
