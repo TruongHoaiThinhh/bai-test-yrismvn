@@ -70,7 +70,9 @@ const SnippetsList = ({ snippets, snippetsLoading, isAll, showAuthor = true }: S
                                                         onClick={(e) => e.stopPropagation()}
                                                         className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                                     >
-                                                        {snippet.author.name || snippet.author.email || t('snippetsList.user')}
+                                                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                                        {(snippet.author as any).name || (snippet.author as any).email || t('snippetsList.user')}
+                                                        {/* {snippet.author.name || snippet.author.email || t('snippetsList.user')} */}
                                                     </Link>
                                                 </div>
                                             )}
