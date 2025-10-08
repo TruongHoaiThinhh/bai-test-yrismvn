@@ -33,7 +33,8 @@ export default function UserProfilePage({ user, initialSnippets, hasInitialData,
             try {
                 const response = await authenticatedApiCall(
                     `/api/snippets?author=${user._id}&limit=100`,
-                    currentUser
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    currentUser as any
                 );
                 setSnippets(response.snippets || []);
             } catch (error) {
