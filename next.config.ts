@@ -7,14 +7,13 @@ const nextConfig: NextConfig = {
     locales: ['vi', 'en'],
   },
   experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+    serverComponentsExternalPackages: ['mongoose'],
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
   },
 };
 

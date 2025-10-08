@@ -9,7 +9,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  await connectDB();
+  try {
+    await connectDB();
+  } catch (error) {
+    console.error('Database connection error:', error);
+    return res.status(500).json({ message: "Lỗi kết nối database" });
+  }
 
   try {
     const { email, password } = req.body;
