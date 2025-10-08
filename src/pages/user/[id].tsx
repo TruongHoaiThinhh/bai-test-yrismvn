@@ -159,12 +159,12 @@ export default function UserProfilePage({ user, initialSnippets, hasInitialData,
                                             <div className="flex items-start justify-between">
                                                 <div className="flex-1">
                                                     <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                                                        <a
+                                                        <Link
                                                             href={`/snippets/${snippet._id}`}
                                                             className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                                         >
                                                             {snippet.title}
-                                                        </a>
+                                                        </Link>
                                                     </h3>
                                                     {snippet.description && (
                                                         <p className="text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
@@ -189,14 +189,14 @@ export default function UserProfilePage({ user, initialSnippets, hasInitialData,
                                                         )}
                                                     </div>
                                                 </div>
-                                                <a
+                                                <Link
                                                     href={`/snippets/${snippet._id}`}
                                                     className="ml-4 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                                                 >
                                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                                     </svg>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </Link>
