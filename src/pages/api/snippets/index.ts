@@ -48,6 +48,7 @@ async function handler(req: AuthenticatedRequest, res: NextApiResponse) {
     }
   }
 
+  
   if (req.method === "GET") {
     try {
       const { page = 1, limit = 10, language, search, author, tag } = req.query;
