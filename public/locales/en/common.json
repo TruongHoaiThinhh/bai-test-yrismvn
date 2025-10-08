@@ -1,0 +1,91 @@
+{
+    "app": {
+      "title": "CodeSnippet",
+      "description": "Share and discover code snippets from the developer community"
+    },
+    "auth": {
+      "login": "Login",
+      "register": "Register",
+      "logout": "Logout",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "name": "Full Name",
+      "loginDescription": "Login to share code snippets",
+      "registerDescription": "Create an account to start sharing code snippets",
+      "loginButton": "Login",
+      "registerButton": "Create Account",
+      "loginLoading": "Logging in...",
+      "registerLoading": "Creating account...",
+      "noAccount": "Don't have an account?",
+      "hasAccount": "Already have an account?",
+      "registerNow": "Register now",
+      "loginNow": "Login now",
+      "demoCredentials": "Demo: demo@example.com / password",
+      "passwordMinLength": "Minimum 6 characters",
+      "termsAndPrivacy": "By registering, you agree to our {{terms}} and {{privacy}}",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "description": "Manage and share your code snippets",
+      "welcome": "Hello, {{name}}",
+      "codeSnippets": "Code Snippets",
+      "tags": "Tags",
+      "views": "Views",
+      "quickActions": "Quick Actions",
+      "createSnippet": "Create new snippet",
+      "manageTags": "Manage tags",
+      "viewStats": "View statistics",
+      "profile": "Profile",
+      "recentSnippets": "Recent Snippets",
+      "noSnippets": "You don't have any snippets yet",
+      "createFirstSnippet": "Create your first snippet"
+    },
+    "snippetsList": {
+      "recentSnippets": "Recent Snippets",
+      "viewAll": "View All",
+      "loading": "Loading...",
+      "noSnippets": "You don't have any snippets yet",
+      "createFirstSnippet": "Create your first snippet",
+      "user": "User"
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "emailExists": "This email is already in use",
+      "invalidEmail": "Invalid email format",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "nameRequired": "Please enter your name",
+      "emailRequired": "Please enter your email",
+      "passwordRequired": "Please enter your password",
+      "genericError": "An error occurred, please try again"
+    },
+    "success": {
+      "registerSuccess": "Registration successful!",
+      "registerSuccessMessage": "Your account has been created successfully. You will be redirected to the login page."
+    },
+    "snippets": {
+        "create": {
+          "title": "Create new snippet",
+          "submit": "Create snippet",
+          "submitting": "Creating...",
+          "reset": "Reset",
+          "success": "Snippet created"
+        },
+        "fields": {
+          "title": "Title",
+          "description": "Description",
+          "code": "Code",
+          "tags": "Tags (comma-separated)",
+          "language": "Language"
+        },
+        "placeholders": {
+          "title": "Enter snippet title",
+          "description": "Short description of the snippet",
+          "code": "Paste your code here...",
+          "tags": "e.g.: array, sort, algorithm"
+        }
+      }
+  }
