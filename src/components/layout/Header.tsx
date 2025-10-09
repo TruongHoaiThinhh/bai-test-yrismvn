@@ -17,19 +17,6 @@ const Header = () => {
                         </Link>
         
                     </div>
-                    {user && (
-                        <div className="flex items-center space-x-4">
-                            <span className="text-gray-700 dark:text-gray-300">
-                                Xin chào, {user?.name}
-                            </span>
-                            <button
-                                onClick={logout}
-                                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
-                            >
-                                Đăng xuất
-                            </button>
-                        </div>
-                    )}
                     <div className="">
                         <LanguageSwitcher />
                     </div>

@@ -9,7 +9,7 @@ import Link from 'next/link';
 import SeoMetaHead from '@/components/layout/SeoMetaHead';
 
 export default function Home() {
-  const { user, isAuthLoading } = useAuth();
+  const { user, isAuthLoading, logout } = useAuth();
   const { t } = useTranslation();
   const [snippets, setSnippets] = useState<ISnippet[]>([]);
   const [snippetsLoading, setSnippetsLoading] = useState(false);
@@ -47,6 +47,17 @@ export default function Home() {
       {user ? (
         <div className={`min-h-screen bg-gray-50 dark:bg-gray-900`}>
           <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="flex items-center space-x-4 mb-8">
+              <span className="text-gray-700 dark:text-gray-300">
+                {user?.name}
+              </span>
+              <button
+                onClick={logout}
+                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
+              >
+                Đăng xuất
+              </button>
+            </div>
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 {t('dashboard.title')}

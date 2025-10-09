@@ -48,15 +48,17 @@ const SnippetsList = ({ snippets, snippetsLoading, isAll, showAuthor = true }: S
                                         <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
                                             {snippet.title}
                                         </h4>
+                                        <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded">
+                                            {snippet.programmingLanguage}
+                                        </span>
                                         {snippet.description && (
-                                            <p className="text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+                                            <p className="text-gray-600 dark:text-gray-400 mb-3 line-clamp-2 mt-2">
                                                 {snippet.description}
                                             </p>
                                         )}
+
                                         <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
-                                            <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded">
-                                                {snippet.programmingLanguage}
-                                            </span>
+
                                             <span>
                                                 {new Date(snippet.createdAt).toLocaleDateString('vi-VN')}
                                             </span>
@@ -65,7 +67,7 @@ const SnippetsList = ({ snippets, snippetsLoading, isAll, showAuthor = true }: S
                                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                                     </svg>
-                                                    <Link 
+                                                    <Link
                                                         href={`/user/${snippet.author._id || snippet.author}`}
                                                         onClick={(e) => e.stopPropagation()}
                                                         className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -76,6 +78,7 @@ const SnippetsList = ({ snippets, snippetsLoading, isAll, showAuthor = true }: S
                                                     </Link>
                                                 </div>
                                             )}
+
                                             {snippet.tags.length > 0 && (
                                                 <div className="flex items-center space-x-1">
                                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,14 +90,14 @@ const SnippetsList = ({ snippets, snippetsLoading, isAll, showAuthor = true }: S
                                             )}
                                         </div>
                                     </div>
-                                    <button
+                                    {/* <button
                                         onClick={() => router.push(`/snippets/${snippet._id}`)}
                                         className="ml-4 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                                     >
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </Link>
